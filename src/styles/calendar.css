@@ -1,0 +1,81 @@
+
+.calendar-header {
+overflow:hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.cal-container{
+    overflow: hidden;
+    background-color: #412a7b;
+    border-radius: 2rem;
+    width: 300px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+@media(max-width:1024px){
+  .cal-container{
+    width: 200px;
+  }
+}
+.nav-arrow {
+  margin: 0 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.month-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.calendar-days {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.calendar-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: transparent;
+  transition: background-color 0.1s, color 0.1s;
+  cursor: pointer;
+}
+
+
+.selected {
+  background-color: white;
+  color: #412a7b;
+}
+
+.day-name {
+  font-size: 15px;
+}
+
+.day-number {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sorry-message{
+    font-size: 3em;
+    text-align: center;
+    margin-top: 100px;
+}

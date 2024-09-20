@@ -1,0 +1,23 @@
+.aurora{
+    position: absolute; 
+    display: grid; 
+    top: 0;
+    left: 0;
+    width:100vw;
+    min-height: 100vh; 
+    place-content: center; 
+    background-color: #1a1a1a;
+    padding-left: 1rem; 
+    padding-right: 1rem; 
+    padding-top: 6rem; 
+    padding-bottom: 6rem; 
+    color: #e5e5e5;
+    z-index: -100;
+}
+#stars{
+    position: absolute;
+    width:100vw;
+    height: 90vh;
+    inset: 0;
+    z-index: 0;
+}

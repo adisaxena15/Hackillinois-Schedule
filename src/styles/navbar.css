@@ -1,0 +1,179 @@
+.custom-checkbox {
+    display: none;
+    visibility: hidden;
+  }
+  .circle-nav{
+    padding: 0 10px ;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .bar {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+  }
+  
+  .bar span {
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    background: #f1faee;
+    border-radius: 100px;
+    display: inline-block;
+    transition: 0.5s ease;
+    left: 0;
+  }
+  
+  .bar span.top {
+    top: 0;
+  }
+  
+  .bar span.middle {
+    top: 17px;
+  }
+  
+  .bar span.bottom {
+    bottom: 0;
+  }
+  
+  .custom-checkbox:checked ~ span.top {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 48px;
+    left: 5px;
+  }
+  
+  .custom-checkbox:checked ~ span.bottom {
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    width: 48px;
+    bottom: -1px;
+    box-shadow: 0 0 10px #495057;
+  }
+  
+  .custom-checkbox:checked ~ span.middle {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  .list{
+    margin-top: 30px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+    list-style-type: none;
+    flex-wrap: wrap; 
+    gap: 2rem;
+  }
+  .dropdown{
+    background-color: black;
+    position: relative;
+    top: 30;
+    left: 50vw;
+    height: 13rem;
+    max-width: 13rem;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .dropdown::before,
+  .dropdown::after{
+      content: '';
+      position: absolute;
+      height: 104%;
+      width: 104%;
+      background-image: conic-gradient(from var(--angle), transparent 0%, #933bdb,#ff0707c9);
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: -1;
+      border-radius: 10px;
+      animation: 3s spin linear infinite;
+  }
+  @media (min-width: 768px) {
+    .dropdown {
+        display: none;
+    }
+  }
+  .dropdown::before{
+    filter: blur(1.4rem);
+    opacity: 0.5;
+  }
+  .cal-container-horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #412a7b;
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 35px;
+  }
+
+  .width-two{
+    margin-left: 0;
+    padding-left: 0;
+    justify-content: right;
+    bottom: 0;
+  }
+  .calendar-header-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .nav-arrow {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .month-name {
+    font-size: 18px;
+    color: white;
+  }
+  
+  .calendar-days-horizontal {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .calendar-day-horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px; 
+    height: 50px;
+    margin: 0 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+  }
+  
+  .calendar-day-horizontal.selected {
+    background-color: white; 
+    color:#412a7b ;
+  }
+
+  .day-name-horizontal {
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  
+  .day-number-horizontal {
+    font-size: 15px;
+    font-weight: bolder;
+  }
